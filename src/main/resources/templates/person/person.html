@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Product list</h1>
+
+	<table>
+		<tr>
+			<th>name</th>
+			<th>age</th>
+		</tr>
+		<tr th:each="person : ${persons}">
+			<td th:text="${person.name}">bruce lee</td>
+			<td th:text="${person.age}">23</td>
+		</tr>
+	</table>
+	<img alt="img" src="../images/ipconfig.png" />
+</body>
+</html>
