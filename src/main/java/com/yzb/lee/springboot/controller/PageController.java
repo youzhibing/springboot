@@ -42,7 +42,15 @@ public class PageController
 	{
 		logger.info("list all person");
 		List<Person> persons = personService.listPerson();
-		System.out.println(persons.size());
+		model.addAttribute("persons", persons);
+		return "person/person";
+	}
+	
+	@GetMapping(path="/mybatisPersons")
+	public String listPersons(Model model)
+	{
+		logger.info("list all person, with using mybatis");
+		List<Person> persons = personService.listPerson();
 		model.addAttribute("persons", persons);
 		return "person/person";
 	}

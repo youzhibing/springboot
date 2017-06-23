@@ -1,4 +1,4 @@
-package com.yzb.lee.springboot.dao;
+package com.yzb.lee.springboot.dao.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
