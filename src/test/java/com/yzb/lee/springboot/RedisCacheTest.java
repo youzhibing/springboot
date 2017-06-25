@@ -15,17 +15,18 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class HelloWorldControllerTest
+public class RedisCacheTest
 {
 	@Autowired
 	private MockMvc mvc;
 
 	@Test
-	public void getHello() throws Exception
+	public void getPerson() throws Exception
 	{
 		mvc.perform(
-				MockMvcRequestBuilders.get("/hello").accept(
-						MediaType.APPLICATION_JSON))
+				MockMvcRequestBuilders.get("/redis/redisCache")
+						.param("personName", "李小龙")
+						.accept(MediaType.APPLICATION_JSON))
 				.andExpect(MockMvcResultMatchers.status().isOk())
 				.andDo(MockMvcResultHandlers.print()).andReturn();
 	}

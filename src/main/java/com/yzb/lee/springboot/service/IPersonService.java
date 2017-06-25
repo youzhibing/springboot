@@ -11,4 +11,6 @@ public interface IPersonService
 	 * @return
 	 */
 	List<Person> listPerson();
+	
+	Person findByPersonName(String name);
 }
