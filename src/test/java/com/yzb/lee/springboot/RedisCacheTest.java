@@ -25,7 +25,7 @@ public class RedisCacheTest
 	{
 		mvc.perform(
 				MockMvcRequestBuilders.get("/redis/redisCache")
-						.param("personName", "李小龙")
+						.param("personName", "Bruce lee")
 						.accept(MediaType.APPLICATION_JSON))
 				.andExpect(MockMvcResultMatchers.status().isOk())
 				.andDo(MockMvcResultHandlers.print()).andReturn();

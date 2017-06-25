@@ -28,7 +28,7 @@ public class PageController
 	 * 
 	 * @return
 	 */
-	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	@RequestMapping(value = "/name", method = RequestMethod.GET)
 	public String hello(Model model)
 	{
 		logger.info("test, hello");
