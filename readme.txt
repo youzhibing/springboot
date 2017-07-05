@@ -30,7 +30,7 @@ redis
 	设置可远程访问
 		修改绑定ip，redis.conf文件中将 bind 127.0.0.1改成bind ip
 	以认证方式启动
-		开启redis.conf中密码配置:vi 命令模式下 /# requirepass, 查找，打开注释，并设置自己的密码
+		开启redis.conf中密码配置:vi 命令模式下 /# requirepass, 查找，打开注释，并设置自己的密码(myredis)
 		启动redis-server:./redis-server /opt/redis-3.2.9/redis.conf
 	客户端连接
 		./redis-cli -h ip -p 6379 -a 新密码
