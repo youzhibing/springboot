@@ -44,9 +44,8 @@ public class RedisConfig extends CachingConfigurerSupport
 		};
 	}
 
-	@SuppressWarnings("rawtypes")
 	@Bean
-	public CacheManager cacheManager(RedisTemplate redisTemplate)
+	public CacheManager cacheManager(RedisTemplate<String, String> redisTemplate)
 	{
 		RedisCacheManager rcm = new RedisCacheManager(redisTemplate);
 		// 设置缓存过期时间
